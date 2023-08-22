@@ -20,7 +20,7 @@ We are the first AIGC & Web3 precision marketing platform.
 
 Our platform aims to revolutionize your web3-native user portraits data and empowers your campaigns with niche content from both expert AI and creators.
 
-[**Deck**](https://gamma.app/public/4oh3j8yta1snnse)
+[**Deck**](https://gamma.app/docs/Martech30-tnv2tz9ui2ukx0f)
 
 # Overview
 ## Identified problems and our advantages
