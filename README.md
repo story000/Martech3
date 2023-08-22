@@ -30,25 +30,25 @@ Meanwhile, the foundation of building a complete and precise marketing strategy 
 
 That's why we make Martech3, the all-in-one platform to reduce marketing costs while increasing benefits for projects and communities, at this point. Our advantages mainly lie in three folds.
 
-1. **Precision marketing.** Martech3 identifies and targets specific groups of Web3 customers with personalized messaging and offerings that are highly relevant to their preferences and behaviors.
-2. **Content marketing.** Martech3 attracts and engages potential Web3 users by creating valuable and relevant content that addresses their needs and interests while building brand awareness.
-3. **Marketing analytics.** Martech3 measures and analyzes the effectiveness and benefits of marketing campaigns, supporting informed decision-making and optimization of marketing strategies.
+1. **Precision marketing.** Martech3 calculates and captures the social value of each account based on Web3 native data, including Lens Social Graph, and asset data from each chain.
+2. **Content marketing.** Martech3 makes every social account a content creator. By publishing creating valuable and relevant content that addresses account follower's need, Martech3 attract and engage potential users while building brand awareness.
+3. **Marketing analytics.** Martech3 measure and analyze the effectiveness and benefits of marketing campaigns, supporting informed decision-making and optimization of marketing strategies.
 
 ## Solution
 Martech3 module architecture includes four modules.
-1. A **Data Indexer** for produce Web3 user semantic labels and portraits
-2. A **Chat-REC** with sophisticated designed prompts to generate targeted content
-3. A **Distribution Channel** which delivers content and collect interaction data
-4. A **Data Dashboard** which provides time-series and event-based marketing analysis
+1. A **Distribution Channel** which distributes project promotion tasks and collect interaction data
+2. A **Data Indexer** to calculate and capture user social value
+3. A **Chat-REC** with sophisticated designed prompts to help user generate targeted marketing content and publish through Lens Protocol
+4. A **Data Dashboard** which provide time-series and event-based marketing analysis
 
 With these four modules, we can aggregate asset data from main blockchains and social activities from social infrastructures like Lens, CyberConnect, and KNN3. With these data acquired, we can make a public good data layer, i.e. the data indexer for user portrait on EVM-based multichain. Above the data layer, the content generation layer is structured based on the project database and user interaction database. Powered by Chatgpt-REC, we can generate personalized recommendation content for subscribed users. Data dashboards and business intelligence analyses are further applied to utilize users'  interactions between users and our product.
 
 ![截屏2023-04-08 01.33.43.png](https://s2.loli.net/2023/04/08/NSQ5fzhR1OIwGEk.png)
 
 
-# ETH Beijing
+# KNN3 Hackathon
 
-In this ETH Beijing Hackson, we mainly focus on constructing the infrastructure and public good data layer. **Specifically, we build a generic zk-EVM-based address portfolio protocol, ensuring that any project on any Layer2 can acquire its users' portfolio on all EVM ecosystems based on our protocols.**
+In this KNN3 Hackathon, we mainly focus on constructing the infrastructure and public good data layer. **Specifically, we build a generic zk-EVM-based address portfolio protocol, ensuring that any project on any Layer2 can acquire its users' portfolio on all EVM ecosystems based on our protocols.**
 
 To do so, We first generate a user profile by off-chain aggregation of his asset and social data on all EVM ecosystems. Subsequently, we deploy a contract for him and use eight **oracles** to upload his user portfolio to any of the ETH Layer 2. 
 
@@ -267,25 +267,4 @@ Here's an example of the data we integrated for one address, which contains four
     }
 }
 ```
-## About Scroll
 
-Sroll is a development of zk-rollup (ZKR) for zkEVM. Before Scroll came out, the main barrier to the adoption of the technology was its lack of EVM compatibility. While ZKR performed better in terms of throughput and gas costs, the inability to easily integrate EVM into zk-tech resulted in each ZKR having to build unique developer tools and infrastructure from scratch. This left zkEVM with the serious problem of how to inherit the network effects of EVM while maintaining a high level of performance. But the introduction of Scroll has dramatically changed this situation for the industry. Contracts deployed on the Ethernet mainnet can be easily ported to Scroll without any major changes to the codebase, greatly increasing the ease of migration of projects to the network
-
-Thus, we believe that more applications and projects will appear on the Scroll ecosystem, especially those migrated from the main network, which increases projects' demand to know their users' portfolios. However, these users' addresses interact pretty lesser on Scroll compared to Mainnet and other early Layer 2. That's why we believe in Scroll and choose to aggregate user profiles onto the Scroll as the first step in our public good data layer. 
-
-To achieve this, we deploy a contract for each address on Scroll and utilize the Oracle **RedStone** to bring off-chain data on-chain. This constitutes a new type of account abstraction. In detail, we abstract the user portfolios aggregated off-chain into 8 fields, each taking values from 0 to 2. 
-
-Here's an example of a user's on-chain portfolio. As we can see, these fields fully reflect users' attitudes, risk appetite, and wealthiness.
-
-```
-{
-    "nft_attitude_oracle": 0,
-    "token_attitude_oracle": 0,
-    "recent_active_trader_type_oracle": 0,
-    "active_trader_type_oracle": 0,
-    "whale_type_oracle": 2,
-    "dealer_oracle": 0,
-    "higher_risk_appetite_oracle": 1
-}
-
-```
